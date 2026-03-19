@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../CSS_FILE/style.css" />
+</head>
+<body>
+    <div class="game-container">
+    <!-- game Title -->
+    <header class="game-header">
+        <button  class="backBtn" type="button" onclick="GoingBackToPlay()">GO BACK</button>
+
+        <h1 class="game-title">Rock Paper Scissors</h1>
+        <p class="game-subtitle">Choose your move and beat the computer!</p>
+    </header>
+
+    <!-- score Board -->
+    <div class="score-board">
+        <div class="score-item">
+        <span class="score-label">Player</span>
+        <span class="score-value" id="player-score">0</span>
+        </div>
+        <div class="score-divider">VS</div>
+        <div class="score-item">
+        <span class="score-label">Computer</span>
+        <span class="score-value" id="computer-score">0</span>
+        </div>
+    </div>
+
+<!-- battle History -->
+        <div class="history-section">
+            <h3 class="history-title">📜 Battle History</h3>
+            <div class="history-list" id="history-list">
+                <p class="history-empty">No battles yet. Start playing!</p>
+            </div>
+        </div>
+
+    <!-- game Arena -->
+    <div class="game-arena">
+        <!-- player Side -->
+        <div class="player-side">
+        <div class="player-label">You</div>
+        <div class="hand-container">
+            <img
+            id="player-hand"
+            src="default-hand.png"
+            alt="Player Hand"
+            class="hand-image" />
+        </div>
+        </div>
+
+        <!-- center controls -->
+        <div class="controls-center">
+        <div class="result-message" id="result-message">Make your move!</div>
+        <div class="button-container">
+            <button class="game-btn rock-btn" onclick="playGame('rock')">
+            <span class="btn-icon">✊</span>
+            <span class="btn-text">Rock</span>
+            </button>
+            <button class="game-btn paper-btn" onclick="playGame('paper')">
+            <span class="btn-icon">✋</span>
+            <span class="btn-text">Paper</span>
+            </button>
+            <button
+            class="game-btn scissors-btn"
+            onclick="playGame('scissors')">
+            <span class="btn-icon">✌️</span>
+            <span class="btn-text">Scissors</span>
+            </button>
+        </div>
+        </div>
+
+        <!-- computer Side -->
+        <div class="computer-side">
+        <div class="player-label">Computer</div>
+        <div class="hand-container">
+            <img
+            id="computer-hand"
+            src="default-hand.png"
+            alt="Computer Hand"
+            class="hand-image" />
+        </div>
+        </div>
+    </div>
+
+    <!-- game rules -->
+    <div class="rules-section">
+        <h3>How to Play</h3>
+        <div class="rules-grid">
+        <div class="rule-item">
+            <span class="rule-icon">✊</span>
+            <span>Rock beats Scissors</span>
+        </div>
+        <div class="rule-item">
+            <span class="rule-icon">✋</span>
+            <span>Paper beats Rock</span>
+        </div>
+        <div class="rule-item">
+            <span class="rule-icon">✌️</span>
+            <span>Scissors beats Paper</span>
+        </div>
+        </div>
+    </div>
+
+    <!-- reset button -->
+    <button class="reset-btn" onclick="resetGame()">Reset Game</button>
+    </div>
+</body>
+<script src="../SCRIPT-FILE/script.js">
+</script>
+</html>
